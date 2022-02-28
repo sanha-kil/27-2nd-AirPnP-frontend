@@ -1,7 +1,7 @@
-import React from 'react';
-
-function useFetch() {
+export function useFetch() {
   return <div>useFetch</div>;
 }
 
-export default useFetch;
+export function useFetchWithToken() {
+  return <div />;
+}
