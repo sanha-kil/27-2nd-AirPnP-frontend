@@ -1,7 +1,20 @@
 import React from 'react';
 
-function useFetch() {
+export function useFetchGet() {
   return <div>useFetch</div>;
 }
 
-export default useFetch;
+export const useFetchWithToken = async ({ endpoint, dataToSend, method }) => {
+  const token = localStorage.getItem('token') || '';
+
+  const data = await fetch(endpoint, {
+    method: method,
+    headers: {
+      Authorization: token,
+    },
+    body: JSON.stringify(dataToSend),
+  });
+  const response = await data.json();
+
+  return { response };
+};
