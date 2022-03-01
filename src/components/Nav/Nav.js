@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { BiSearch } from 'react-icons/bi';
 import { IoMenuOutline } from 'react-icons/io5';
 import ExtendedSearchBar from './ExtendedSearchBar/ExtendedSearchBar';
 import Login from '../../pages/Login/Login';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useNav from './useNav';
 
