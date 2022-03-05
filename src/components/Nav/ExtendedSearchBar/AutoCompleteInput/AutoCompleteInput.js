@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CATEGORY_LIST } from './CategoryList';
+import useAutoCompleteInput from './useAutoCompleteInput';
 
 const AutoCompleteInput = ({ searchInput, setSearchInput }) => {
-  const filteredList = CATEGORY_LIST.filter(({ name }) =>
-    name.includes(searchInput)
-  );
+  const { filteredList } = useAutoCompleteInput(searchInput);
 
   return (
     <AutoComplete>
